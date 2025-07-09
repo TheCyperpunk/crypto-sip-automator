@@ -1,5 +1,5 @@
 
-import { Github, ExternalLink, Twitter, Telegram } from 'lucide-react';
+import { Github, ExternalLink, Twitter, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -26,7 +26,7 @@ const Footer = () => {
                 <Twitter className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
-                <Telegram className="w-5 h-5" />
+                <MessageCircle className="w-5 h-5" />
               </a>
             </div>
           </div>
