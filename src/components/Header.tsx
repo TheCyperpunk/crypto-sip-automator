@@ -21,13 +21,13 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="sticky top-0 z-50 bg-black/20 backdrop-blur-xl border-b border-purple-500/20">
+    <header className="sticky top-0 z-50 bg-black/20 backdrop-blur-xl border-b border-primary/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-              <TrendingUp className="w-5 h-5 text-white" />
+            <div className="w-8 h-8 bg-gradient-to-r from-primary to-yellow-400 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+              <TrendingUp className="w-5 h-5 text-black" />
             </div>
             <span className="font-bold text-xl text-white">SIPChain</span>
           </Link>
@@ -40,7 +40,7 @@ const Header = () => {
                 to={item.href}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   isActive(item.href)
-                    ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/25'
+                    ? 'bg-primary text-black shadow-lg shadow-primary/25'
                     : 'text-gray-300 hover:text-white hover:bg-white/10'
                 }`}
               >
@@ -68,7 +68,7 @@ const Header = () => {
             ) : (
               <Button
                 onClick={connectWallet}
-                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-lg shadow-purple-500/25"
+                className="bg-gradient-to-r from-primary to-yellow-400 hover:from-yellow-500 hover:to-primary text-black shadow-lg shadow-primary/25"
               >
                 <Wallet className="w-4 h-4 mr-2" />
                 Connect Wallet
@@ -90,7 +90,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-16 left-0 right-0 bg-black/95 backdrop-blur-xl border-b border-purple-500/20">
+        <div className="md:hidden absolute top-16 left-0 right-0 bg-black/95 backdrop-blur-xl border-b border-primary/20">
           <div className="px-4 py-2 space-y-1">
             {navigation.map((item) => (
               <Link
@@ -98,7 +98,7 @@ const Header = () => {
                 to={item.href}
                 className={`flex items-center px-4 py-3 rounded-lg text-sm font-medium transition-all ${
                   isActive(item.href)
-                    ? 'bg-purple-600 text-white'
+                    ? 'bg-primary text-black'
                     : 'text-gray-300 hover:text-white hover:bg-white/10'
                 }`}
                 onClick={() => setIsMenuOpen(false)}

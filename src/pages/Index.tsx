@@ -30,22 +30,22 @@ const Index = () => {
 
   const tokens = [
     { name: 'Bitcoin', symbol: 'wBTC', icon: '₿', color: 'from-orange-500 to-yellow-500' },
-    { name: 'Ethereum', symbol: 'wETH', icon: 'Ξ', color: 'from-blue-500 to-purple-500' },
-    { name: 'Solana', symbol: 'wSOL', icon: 'S', color: 'from-purple-500 to-pink-500' },
-    { name: 'BNB', symbol: 'BNB', icon: 'B', color: 'from-yellow-500 to-orange-500' },
+    { name: 'Ethereum', symbol: 'wETH', icon: 'Ξ', color: 'from-primary to-yellow-400' },
+    { name: 'Solana', symbol: 'wSOL', icon: 'S', color: 'from-yellow-400 to-primary' },
+    { name: 'BNB', symbol: 'BNB', icon: 'B', color: 'from-primary to-yellow-600' },
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-yellow-400/10 animate-pulse"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="animate-fade-in">
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
                 Invest in Crypto
-                <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-primary to-yellow-400 bg-clip-text text-transparent">
                   Automatically
                 </span>
                 <span className="block text-3xl md:text-5xl lg:text-6xl mt-2">
@@ -58,13 +58,13 @@ const Index = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/create">
-                  <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-3 text-lg shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105">
+                  <Button className="bg-gradient-to-r from-primary to-yellow-400 hover:from-yellow-500 hover:to-primary text-black px-8 py-3 text-lg shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300 hover:scale-105">
                     Get Started
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
                 <Link to="/dashboard">
-                  <Button variant="outline" className="border-purple-500/30 text-purple-300 hover:bg-purple-600/20 px-8 py-3 text-lg">
+                  <Button variant="outline" className="border-primary/30 text-primary hover:bg-primary/20 px-8 py-3 text-lg">
                     View Dashboard
                     <ChevronRight className="ml-2 w-5 h-5" />
                   </Button>
@@ -91,12 +91,12 @@ const Index = () => {
             {features.map((feature, index) => (
               <Card 
                 key={feature.title} 
-                className="bg-white/5 border-purple-500/20 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 animate-fade-in"
+                className="bg-white/5 border-primary/20 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/20 animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-primary to-yellow-400 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-6 h-6 text-black" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -123,7 +123,7 @@ const Index = () => {
             {tokens.map((token, index) => (
               <Card 
                 key={token.symbol} 
-                className="bg-white/5 border-purple-500/20 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 animate-fade-in group cursor-pointer"
+                className="bg-white/5 border-primary/20 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/20 animate-fade-in group cursor-pointer"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="p-6 text-center">
@@ -131,8 +131,8 @@ const Index = () => {
                     <span className="text-2xl font-bold text-white">{token.icon}</span>
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-1">{token.name}</h3>
-                  <p className="text-purple-300">{token.symbol}</p>
-                  <div className="mt-2 text-xs text-gray-400 bg-purple-500/20 px-2 py-1 rounded-full">
+                  <p className="text-primary">{token.symbol}</p>
+                  <div className="mt-2 text-xs text-gray-400 bg-primary/20 px-2 py-1 rounded-full">
                     Wrapped
                   </div>
                 </CardContent>
@@ -145,7 +145,7 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Card className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-500/30">
+          <Card className="bg-gradient-to-r from-primary/20 to-yellow-400/20 border-primary/30">
             <CardContent className="p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Start Your Journey?
@@ -154,7 +154,7 @@ const Index = () => {
                 Join thousands of users who are building wealth through systematic crypto investing.
               </p>
               <Link to="/create">
-                <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-3 text-lg shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105">
+                <Button className="bg-gradient-to-r from-primary to-yellow-400 hover:from-yellow-500 hover:to-primary text-black px-8 py-3 text-lg shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300 hover:scale-105">
                   Create Your First SIP
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
