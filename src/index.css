@@ -9,44 +9,44 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
+    --background: 197 24% 8%;
     --foreground: 0 0% 100%;
 
-    --card: 0 0% 5%;
+    --card: 197 24% 12%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 5%;
+    --popover: 197 24% 12%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 45 91% 49%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 280 44% 63%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 10%;
+    --secondary: 197 24% 52%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 197 24% 20%;
+    --muted-foreground: 194 35% 79%;
 
-    --accent: 45 91% 49%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 248 95% 89%;
+    --accent-foreground: 197 24% 8%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 10%;
-    --ring: 45 91% 49%;
+    --border: 193 44% 25%;
+    --input: 197 24% 15%;
+    --ring: 280 44% 63%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 0%;
+    --sidebar-background: 197 24% 8%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 45 91% 49%;
-    --sidebar-primary-foreground: 0 0% 0%;
-    --sidebar-accent: 0 0% 10%;
+    --sidebar-primary: 280 44% 63%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 197 24% 20%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 15%;
-    --sidebar-ring: 45 91% 49%;
+    --sidebar-border: 193 44% 25%;
+    --sidebar-ring: 280 44% 63%;
   }
 }
 
@@ -80,7 +80,7 @@ All colors MUST be HSL.
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-primary via-yellow-400 to-primary bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
   }
   
   .card-hover {
@@ -88,7 +88,7 @@ All colors MUST be HSL.
   }
   
   .btn-primary {
-    @apply bg-gradient-to-r from-primary to-yellow-400 hover:from-yellow-500 hover:to-primary text-black shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300 hover:scale-105;
+    @apply bg-gradient-to-r from-primary to-accent hover:from-secondary hover:to-primary text-primary-foreground shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-all duration-300 hover:scale-105;
   }
 }
 
@@ -99,8 +99,8 @@ All colors MUST be HSL.
 }
 
 @keyframes glow {
-  0%, 100% { box-shadow: 0 0 5px hsl(45, 91%, 49%, 0.5); }
-  50% { box-shadow: 0 0 20px hsl(45, 91%, 49%, 0.8), 0 0 30px hsl(45, 91%, 49%, 0.3); }
+  0%, 100% { box-shadow: 0 0 5px hsl(280, 44%, 63%, 0.5); }
+  50% { box-shadow: 0 0 20px hsl(280, 44%, 63%, 0.8), 0 0 30px hsl(280, 44%, 63%, 0.3); }
 }
 
 .animate-float {
@@ -111,20 +111,20 @@ All colors MUST be HSL.
   animation: glow 2s ease-in-out infinite;
 }
 
-/* BNB Chain-inspired design elements */
-.bnb-gradient {
-  background: linear-gradient(135deg, hsl(45, 91%, 49%) 0%, hsl(45, 100%, 60%) 100%);
+/* Teal and purple gradient elements */
+.teal-purple-gradient {
+  background: linear-gradient(135deg, hsl(280, 44%, 63%) 0%, hsl(248, 95%, 89%) 50%, hsl(197, 24%, 52%) 100%);
 }
 
-.bnb-card {
-  background: rgba(0, 0, 0, 0.8);
+.theme-card {
+  background: rgba(45, 79, 95, 0.8);
   backdrop-filter: blur(10px);
-  border: 1px solid hsl(45, 91%, 49%, 0.2);
+  border: 1px solid hsl(280, 44%, 63%, 0.2);
 }
 
 /* Enhanced glassmorphism effect */
 .glass {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(45, 79, 95, 0.7);
   backdrop-filter: blur(20px);
-  border: 1px solid hsl(45, 91%, 49%, 0.1);
+  border: 1px solid hsl(280, 44%, 63%, 0.1);
 }
